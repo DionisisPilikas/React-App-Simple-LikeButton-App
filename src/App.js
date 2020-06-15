@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from 'react'; // Are we using HTML inside our JS? If yes, then we need to import React
+
+// we have 2 components
+import Title from './Components/Title';
+import LikeButton from './Components/Like';
+
 import './App.css';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/*create Title element*/}
+      <Title></Title>
+
+      {/*create LikeButton element*/}
+      <LikeButton likes="0"  ></LikeButton>  {/*initialize number of likes to 0*/}
     </div>
   );
 }
-
 export default App;
